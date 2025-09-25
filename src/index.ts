@@ -13,6 +13,7 @@ import { handlerAgg } from "./commands/aggregate";
 import { handlerAddFeed, handlerFeeds } from "./commands/feeds";
 import { handlerFollow, handlerUnfollow, handlerFollowing } from "./commands/feed-follows";
 import { middlewareLoggedIn } from "./middleware";
+import { handlerBrowse } from "./commands/browse.js";
 
 async function main() {
   if (process.argv.length < 3) {
@@ -34,6 +35,7 @@ async function main() {
   registerCommand(registry, "follow", middlewareLoggedIn(handlerFollow));
   registerCommand(registry, "following", middlewareLoggedIn(handlerFollowing));
   registerCommand(registry, "unfollow", middlewareLoggedIn(handlerUnfollow));
+  registerCommand(registry, "browse", middlewareLoggedIn(handlerBrowse));
 
   async function handlerPrintHelp(cmdName: string, ...args: string[]) {
     if (args.length !== 0) {

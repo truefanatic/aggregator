@@ -29,6 +29,20 @@
       "when": 1758749714918,
       "tag": "0003_milky_klaw",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1758775270971,
+      "tag": "0004_ancient_yellowjacket",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1758819631069,
+      "tag": "0005_lucky_sharon_ventura",
+      "breakpoints": true
     }
   ]
 }

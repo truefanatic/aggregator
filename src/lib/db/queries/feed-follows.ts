@@ -36,7 +36,6 @@ export async function deleteFeedFollow(feedId: string, userId: string) {
     .delete(feedFollows)
     .where(and(eq(feedFollows.feedId, feedId), eq(feedFollows.userId, userId)))
     .returning();
-
   return result;
 }
 

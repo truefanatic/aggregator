@@ -11,11 +11,11 @@ export type UserCommandHandler = (
 ) => Promise<void>;
 export type CommandsRegistry = Record<string, CommandHandler>;
 
-export async function registerCommand(
+export function registerCommand(
   registry: CommandsRegistry,
   cmdName: string,
   handler: CommandHandler
-) {
+): void {
   registry[cmdName] = handler;
 }
 

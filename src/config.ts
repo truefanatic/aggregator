@@ -3,9 +3,8 @@ import os from "os";
 import path from "path";
 
 type Config = {
-  dbUrl: string;
-  currentUserName: string;
-  url: string;
+  dbUrl: string,
+  currentUserName: string
 };
 
 export function setUser(username: string) {
@@ -41,9 +40,6 @@ function validateConfig(rawConfig: any) {
   if (!rawConfig.db_url || typeof rawConfig.db_url !== "string") {
     throw new Error("db_url is required in config file");
   }
-  if (!rawConfig.url || typeof rawConfig.url !== "string") {
-    throw new Error("url is required in config file");
-  }
   if (
     !rawConfig.current_user_name ||
     typeof rawConfig.current_user_name !== "string"
@@ -52,8 +48,7 @@ function validateConfig(rawConfig: any) {
   }
   const config: Config = {
     dbUrl: rawConfig.db_url,
-    currentUserName: rawConfig.current_user_name,
-    url: rawConfig.url
+    currentUserName: rawConfig.current_user_name
   };
   return config;
 }

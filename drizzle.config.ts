@@ -7,6 +7,6 @@ export default defineConfig({
   out: "src/lib/db/out",
   dialect: "postgresql",
   dbCredentials: {
-    url: readConfig().url
+    url: readConfig().dbUrl
   },
 });
